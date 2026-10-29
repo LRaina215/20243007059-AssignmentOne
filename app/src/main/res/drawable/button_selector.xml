@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- Put the pressed state first: Android uses the first matching item. -->
     <item
         android:state_pressed="true"
         android:drawable="@color/light_green" />
 
+    <!-- Default background when the button is not pressed. -->
     <item android:drawable="@color/green" />
 
 </selector>

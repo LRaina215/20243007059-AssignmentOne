@@ -11,6 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+/** Shows the service areas and opens the detail page for the selected topic. */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        // Keep content clear of the status and navigation bars.
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -25,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // Both main layouts reference these public methods through android:onClick.
+    // Topic indices follow the resource array order:
+    // 0 = Facilities, 1 = Events, 2 = Clubs, 3 = Support.
     public void facilitiesClicked(View view) {
         Toast.makeText(this, "Facilities clicked", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, DetailActivity.class);

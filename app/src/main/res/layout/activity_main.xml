@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <!-- Equal weights give the banner and menu half of the available height each. -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -18,6 +19,7 @@
         android:textSize="40sp"
         />
 
+    <!-- Portrait menu: two equal-width columns form a two-by-two grid. -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -25,6 +27,7 @@
         android:orientation="horizontal"
         android:background="@color/green">
 
+        <!-- Left column: Facilities above Clubs. -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -71,6 +74,7 @@
                 />
         </LinearLayout>
 
+        <!-- Right column: Events above Support. -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
