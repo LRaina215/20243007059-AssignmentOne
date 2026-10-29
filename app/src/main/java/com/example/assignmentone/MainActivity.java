@@ -1,5 +1,6 @@
 package com.example.assignmentone;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -26,17 +27,29 @@ public class MainActivity extends AppCompatActivity {
 
     public void facilitiesClicked(View view) {
         Toast.makeText(this, "Facilities clicked", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra("topic_index", 0);
+        startActivity(intent);
     }
 
     public void eventsClicked(View view) {
         Toast.makeText(this, "Events clicked", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra("topic_index", 1);
+        startActivity(intent);
     }
 
     public void clubsClicked(View view) {
         Toast.makeText(this, "Clubs clicked", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra("topic_index", 2);
+        startActivity(intent);
     }
 
     public void supportClicked(View view) {
         Toast.makeText(this, "Support clicked", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra("topic_index", 3);
+        startActivity(intent);
     }
 }
